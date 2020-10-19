@@ -1,1 +1,1 @@
-# [aim-game](https://yarikleto.github.io/Password-creator/dist/) (clickable)
+# [aim-game](https://Aglto.github.io) (clickable)
