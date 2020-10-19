@@ -5,6 +5,14 @@ body {
   height: 100%;
   display: flex;
   background: url(/img/background.jpg) no-repeat;
+  cursor: crosshair;
+}
+
+.counter {
+  font-size: 80px;
+  color: #FFC0CB;
+  position: absolute;
+  left: 20px;
 }
 
 .game-window {
@@ -18,7 +26,7 @@ body {
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  background: black;
+  background: orange;
   position: absolute;
   animation-name: circle-animation;
   animation-duration: 4s;
