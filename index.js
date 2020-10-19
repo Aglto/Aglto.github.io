@@ -3,24 +3,20 @@ const gameCounter = document.querySelector('.counter');
 let i = 0;
 let timeInterval = 1000;
 
-function getXPositionOfElement() {
-  const xPosition = Math.floor(Math.random() * gameWindow.clientWidth);
-  return xPosition;
-}
+const getXPositionOfElement = () => {
+  return Math.floor(Math.random() * gameWindow.clientWidth);
+};
 
+const getYPositionOfElement = () => {
+  return Math.floor(Math.random() * gameWindow.clientHeight);
+};
 
-function getYPositionOfElement() {
-  const yPosition = Math.floor(Math.random() * gameWindow.clientHeight);
-  return yPosition;
-}
-
-
-function deleteItem(item) {
+const deleteItem = (item) => {
   item.classList.remove('circle');
   item.remove();
-}
+};
 
-function getGameLevel() {
+const getGameLevel = () => {
   switch(i) {
     case 20:
       timeInterval -= 200;
@@ -32,11 +28,9 @@ function getGameLevel() {
       timeInterval -= 100;
       break;
   }
-}
+};
 
-
-
-function showElements() {
+const showElements = () => {
   const element = document.createElement('div');
   element.style.top = `${getYPositionOfElement()}px`;
   element.style.left = `${getXPositionOfElement()}px`;
@@ -51,6 +45,6 @@ function showElements() {
     deleteItem(element);
   });
   setTimeout(showElements, timeInterval);
-}
+};
 
 showElements();
